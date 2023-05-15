@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h4>Zadanie 1</h4>
+    <button onclick="TabliczkaMnozenia()">Pokaz tabliczke</button>
+    <table id="tabliczka_mnozenia">
+    </table>
+
+
+    <h4>Zadanie 2</h4>
+    <div class="mydata"></div>
+    <button onclick="rand_pers()">blabla</button>
+
+    <h4>Zadanie 3</h4>
+    <h2>Kod pin: 1234</h2>
+	<h1>Bankomat</h1>
+	<p>Podaj numer PIN:</p>
+	<input type="password" id="pin">
+	<button onclick="logowanie()">Zaloguj</button>
+	<div id="kontener" style="display:none">
+		<p>Witaj, <span id="imieNazwisko"></span>!</p>
+		<p>Stan konta: <span id="stanKonta"></span> zł</p>
+		<p>Co chcesz zrobić?</p>
+		<button onclick="wyplata()">Wybierz gotówkę</button>
+		<button onclick="wplata()">Wpłać gotówkę</button>
+	</div>
+
+</body>
+</html>
