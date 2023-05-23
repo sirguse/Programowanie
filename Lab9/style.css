@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+form {
+    position: absolute;
+    width:13vw;
+    border-radius: 20px;
+    background-color: rgb(110, 110, 110);
+    padding:20px;
+
+
+}
+.control {
+    position:relative;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.error{
+    color: red;
+}
+.Login{
+    position: absolute;
+    top:5%;
+    left:40%;
+
+}
+.Login button{
+    height:5vh;
+    width:5vw;
+    
+}
+.Register{
+    position: absolute;
+    top:5%;
+    left:50%
+}
+.Register button{
+    height:5vh;
+    width:5vw;
+
+}

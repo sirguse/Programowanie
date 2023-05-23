@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorium 9</title>
+    <script src="/scripts.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="Login">
+        <button id="loginButton">Logowanie</button>
+    </div>
+    <div class="Register">
+        <button id="registerButton">Rejestracja</button>
+    </div>
+    
+
+
+
+
+
+    
+    <div id="form" style="display: none;">
+        <h2>Logowanie</h2>
+        <div class="control">
+            <label for="username">Login:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="control">
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" required>
+        </div>
+        <button onclick="login()">Login</button>
+    </div>
+    
+
+
+
+    <div id="form1" style="display: none;">
+        <h2>Rejestracja</h2>
+        <div class="control">
+            <label for="reg-username">Login:</label>
+            <input type="text" id="reg-username" required>
+        </div>
+        <div class="control">
+            <label for="reg-password">Hasło:</label>
+            <input type="password" id="reg-password" required>
+        </div>
+        <div class="control">
+            <label for="confirm-password">Powtórz hasło:</label>
+            <input type="password" id="confirm-password" required>
+        </div>
+        <button onclick="register()">Zarejestruj</button>
+    </div>
+    
+
+
+</body>
+</html>
