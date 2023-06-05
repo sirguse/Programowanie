@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+  <form id="registrationForm">
+    <label for="fname">Imię:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+    <label for="lname">Nazwisko:</label><br>
+    <input type="text" id="lname" name="lname" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Hasło:</label><br>
+    <input type="password" id="password" name="password" minlength="8" required><br>
+    <label for="gender">Płeć:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Mężczyzna</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Kobieta</label><br>
+    <label for="phone">Telefon:</label><br>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="dob">Data urodzenia:</label><br>
+    <input type="date" id="dob" name="dob" required><br>
+    <label for="country">Kraj:</label><br>
+    <input type="text" id="country" name="country" required><br>
+    
+    <label for="state">Województwo:</label><br>
+    <input type="text" id="state" name="state" disabled><br>
+    <label for="residenceAddress">Adres zamieszkania:</label><br>
+    <input type="text" id="residenceAddress" name="residenceAddress" disabled><br>
+    <label for="sameAddress">Adres korespondencyjny jest taki sam jak adres zamieszkania:</label>
+    <input type="checkbox" id="sameAddress" name="sameAddress" checked><br>
+    <div id="mailingAddressSection" style="display: none;">
+      <label for="mailingAddress">Adres korespondencyjny:</label><br>
+      <input type="text" id="mailingAddress" name="mailingAddress" disabled><br>
+    </div>
+    <input type="submit" value="Zapisz">
+  </form>
+  
+
+</body>
+</html>
