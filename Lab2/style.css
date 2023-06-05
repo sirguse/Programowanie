@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif
+}
+
+h1 {
+    font-size: 50px;
+}
+h4 {
+    font-size: 30px;
+}
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #aaa;
+    padding: 0px 70px;
+    z-index: 100;
+    list-style: none;
+    
+    
+}
+#Pies{
+    position: relative;
+    width: 20vw;
+    height:45vh;
+}
+#Pies:hover{
+    width:90vw;
+}
+#Ksiazka{
+    font-size: 25px;
+    text-decoration: none;
+    color: red;
+    
+}
+article{
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 120px;
+
+}
+article, section {
+    display: block;
+    margin: 0 120px;
+    font-size: 20px;
+  }
+  article {
+    position: relative;
+    display: sticky;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 120px;
+  }
+  .article-element {
+    width: 50%;
+  }
+
