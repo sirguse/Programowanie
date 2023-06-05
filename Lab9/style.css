@@ -1,46 +1,48 @@
+img {
+    border-radius: 50%;
+    opacity: 0.5;
+    width: 100%;
+    max-width: 500px;
+}
+
+img:active {
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    background-color: #f8f8f8;
+    padding: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    border-bottom: 1px solid #e7e7e7;
+}
+.header h1 {
     margin: 0;
 }
-form {
-    position: absolute;
-    width:13vw;
-    border-radius: 20px;
-    background-color: rgb(110, 110, 110);
-    padding:20px;
-
-
+.header a {
+    color: #333;
+    text-decoration: none;
 }
-.control {
+.content {
+    padding: 70px 10px;
+}
+.box {
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.header a{
     position:relative;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-}
-.error{
-    color: red;
-}
-.Login{
-    position: absolute;
-    top:5%;
-    left:40%;
-
-}
-.Login button{
-    height:5vh;
-    width:5vw;
-    
-}
-.Register{
-    position: absolute;
-    top:5%;
-    left:50%
-}
-.Register button{
-    height:5vh;
-    width:5vw;
-
+    right:2%;
 }
