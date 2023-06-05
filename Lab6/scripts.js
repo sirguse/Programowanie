@@ -53,46 +53,26 @@ class Prostokąt {
         this.szerokość = szerokość;
         this.nazwa = nazwa;
     }
-    Obwod(){
-        console.log((2*this.wysokość)+(2*this.szerokość))
+    obwod() {
+        return (2 * this.wysokość) + (2 * this.szerokość);
     }
-    Pole(){
-        console.log(this.wysokość*this.szerokość)
+    pole() {
+        return this.wysokość * this.szerokość;
     }
-    Porownanie(Pole2){
-        let pole1 = this.Pole() // Chyba zeby to dzialalo musialbym uzyc return, ale zostawiam to tak jak jest
-        let pole2 = Pole2.Pole();
+    nowy(nowaNazwa) {
+        this.nazwa = nowaNazwa;
+    }
 
-        if (pole1 > pole2){
-            
-            console.log("Pole1 jest wieksze")
-        }
-        else{
-            
-            console.log("Pole2 jest wieksze")
-        }
-    }
 }
 
 class Trójkąt {
-    constructor(wysokość, długość, podstawy, nazwa){
+    constructor(wysokość, długośćPodstawy, nazwa){
         this.wysokość = wysokość;
-        this.długość = długość;
-        this.podstawy = podstawy;
+        this.długośćPodstawy = długośćPodstawy;
         this.nazwa = nazwa;
     }
-    Pole(){
-        let pole = (this.długość*this.wysokość)/2
-        return (pole);
-        //console.log("Pole trójkąta wynosi: ",pole)
-    }
-    Porownanie(Pole2){
-        if (this.Pole()> Pole2.Pole()){
-            return this;
-        }
-        else{
-            return Pole2
-        }
+    pole() {
+        return (this.długośćPodstawy * this.wysokość) / 2;
     }
 }
 
@@ -103,37 +83,30 @@ class Trapez {
         this.podstawa2 = podstawa2;
         this.nazwa = nazwa;
     }
-    PoleTrapezu(){
+    pole() {
         return (this.podstawa1 + this.podstawa2) * this.wysokość / 2;
     }
-    
 }
 
+function najwiekszaFigura(prostokąt, trójkąt, trapez) {
+    const prostokątPole = prostokąt.pole();
+    const trójkątPole = trójkąt.pole();
+    const trapezPole = trapez.pole();
 
-function MaxFigura(Prostokąt,Trójkąt,Trapez){
-    let ProstokątPole = Prostokąt.Pole();
-    let TrójkątPole = Trójkąt.Pole()
-    let TrapezPole = Trapez.PoleTrapezu()
-
-    let maxPole = Math.max(ProstokątPole, TrójkątPole, TrapezPole);
-
-    if (maxPole == ProstokątPole){
-        console.log("Największa figura to Prostokąt o polu: ", maxPole);
+    if(prostokątPole > trójkątPole && prostokątPole > trapezPole) {
+        console.log(`Największa figura to: ${prostokąt.nazwa}, z polem: ${prostokątPole}`);
+    } else if(trójkątPole > prostokątPole && trójkątPole > trapezPole) {
+        console.log(`Największa figura to: ${trójkąt.nazwa}, z polem: ${trójkątPole}`);
+    } else {
+        console.log(`Największa figura to: ${trapez.nazwa}, z polem: ${trapezPole}`);
     }
-    else if (maxPole == TrójkątPole){
-        console.log("Największa figura to Trójkąt o polu: ", maxPole);
-    }
-    else{
-        console.log("Największa figura to Trapez o polu: ", maxPole);
-    }
-
 }
 
 let prostokąt1 = new Prostokąt(2, 3, "Prostokąt1");
 let trójkąt1 = new Trójkąt(3, 4, 5, "Trójkąt1");
 let trapez1 = new Trapez(2, 4, 6, "Trapez1");
 
-MaxFigura(prostokąt1, trójkąt1, trapez1);
+
 
 
 function MaxObwod(Prostokat1, Prostokat2){
@@ -148,7 +121,21 @@ function MaxObwod(Prostokat1, Prostokat2){
     }
 }
 
-let prostokąt1 = new Prostokąt(2, 3, "Prostokąt1");
-let prostokąt2 = new Prostokąt(4, 5, "Prostokąt2");
+let prostokąt = new Prostokąt(10, 20, "Prostokąt 1");
+let trójkąt = new Trójkąt(10, 20, "Trójkąt 1");
+let trapez = new Trapez(10, 20, 30, "Trapez 1");
 
-let maxObwod = MaxObwod(prostokąt1, prostokąt2);
+najwiekszaFigura(prostokąt, trójkąt, trapez);
+
+function Obwod(prostokat1, prostokat2) {
+    return prostokat1.obwod() > prostokat2.obwod() ? prostokat1 : prostokat2;
+}
+
+let prostokątA = new Prostokąt(10, 20, "Prostokąt 1");
+let prostokątB = new Prostokąt(6, 3, "Prostokąt 2");
+
+console.log(Obwod(prostokątA, prostokątB).nazwa); // zwraca nazwę prostokąta o większym obwodzie
+
+prostokąt1.nowy("Nowa nazwa prostokąta"); 
+console.log(prostokąt1.nazwa); // Nie wiem, problem się pojawia
+
